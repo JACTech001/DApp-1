@@ -1,0 +1,220 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.dashboard {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  color: #f1f5f9;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  margin-top: 90px;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #60a5fa;
+}
+
+.connect {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.connect:hover {
+  background: #4f46e5;
+}
+
+.card {
+  background: #0f172a;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 0.3rem;
+}
+
+.balance {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f1f5f9;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  background: #4f46e5;
+}
+
+.loading {
+  margin-top: 1rem;
+  color: #facc15;
+  text-align: center;
+}
+
+.error {
+  margin-top: 1rem;
+  color: #f87171;
+  text-align: center;
+}
+
+.tx {
+  margin-top: 15px;
+  padding: 10px 12px;
+  background: #1e293b;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #cbd5e1;
+  word-break: break-all;      /* prevents overflow */
+  overflow-wrap: anywhere;    /* extra safety */
+  max-width: 100%;
+}
+
+.tx a {
+  display: inline-block;
+  margin-left: 6px;
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.tx a:hover {
+  color: #16a34a;
+  text-decoration: underline;
+}
+
+
+.txSuccess {
+  margin-top: 18px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border: 1px solid #22c55e;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: fadeIn 0.4s ease-in-out;
+  max-width: 100%;
+}
+
+.txIcon {
+  background: #22c55e;
+  color: white;
+  font-weight: bold;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.txContent {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  overflow: hidden;
+}
+
+.txContent span {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.txContent a {
+  color: #60a5fa;
+  text-decoration: none;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  transition: 0.2s;
+}
+
+.txContent a:hover {
+  text-decoration: underline;
+  color: #3b82f6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .dashboard {
+    padding: 1.5rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+}
