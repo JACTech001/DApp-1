@@ -1,0 +1,151 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar container */
+.navbar {
+  width: 100%;
+  min-height: 60px;
+  background-color: #0f172a; /* dark background */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1.5rem;
+  font-family: "Segoe UI", sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Navigation links */
+.links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.links li {
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.links li:hover {
+  color: #6366f1;
+}
+
+/* Wallet Box */
+.walletBox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #1e293b;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.walletBox span {
+  font-weight: 800;
+}
+
+.walletBox a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+}
+
+.walletBox a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.walletBox button {
+  background: #6366f1;
+  border: none;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.walletBox button:hover {
+  background: #4f46e5;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #0f172a;
+    width: 220px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    display: none;
+  }
+
+  .links.active {
+    display: flex;
+  }
+
+  .walletBox {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    width: 100%;
+  }
+
+  .walletBox span,
+  .walletBox a,
+  .walletBox button {
+    font-size: 0.85rem;
+  }
+}
+
+/* Transaction link styling (e.g., txHash) */
+.tx {
+  color: #60a5fa;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.tx a {
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tx a:hover {
+  text-decoration: underline;
+}
